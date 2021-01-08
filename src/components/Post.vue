@@ -53,6 +53,7 @@ export default {
         }
       })
       this.comments.unshift(res.data)
+      this.commentText = ''
     }
   }
 }

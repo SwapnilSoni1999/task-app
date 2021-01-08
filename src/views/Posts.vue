@@ -49,6 +49,8 @@ export default {
         }
       })
       this.posts.unshift(res.data)
+      this.newPost.title = ''
+      this.newPost.body = ''
     }
   },
   async mounted() {
