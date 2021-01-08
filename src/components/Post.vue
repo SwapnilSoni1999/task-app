@@ -1,5 +1,5 @@
 <template>
-  <div class="p-5 mx-auto flex flex-col shadow-md">
+  <div class="p-5 mx-auto max-w-3xl flex flex-col shadow-md">
     <div class="font-semibold">User {{ userId }}</div>
     <div class="text-xl">{{ title }}</div>
     <div>{{ body }}</div>
