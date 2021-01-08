@@ -31,14 +31,6 @@ const router = new VueRouter({
       },
       meta: { authReq: true }
     },
-    {
-      path: '/create-post',
-      name: 'CreatePost',
-      component: () => { 
-        return import(/* webpackChunkName: "create-post" */ '../views/CreatePost.vue')
-      },
-      meta: { authReq: true }
-    }
     // {
     //   path: '/about',
     //   name: 'About',

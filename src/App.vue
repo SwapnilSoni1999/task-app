@@ -5,7 +5,7 @@
       <router-link v-if="!isAuth" to="/login">Login</router-link>
       <span v-else>{{ getUser }}</span> <span v-if="isAuth"> | </span>
       <router-link v-if="isAuth" to="/post">Posts</router-link> <span v-if="isAuth"> | </span>
-      <router-link v-if="isAuth" to="/create-post">Create Post</router-link>
+      <button @click="logout()" v-if="isAuth">Logout</button>
     </div>
     <router-view />
   </div>
@@ -15,6 +15,12 @@
 import store from '@/store'
 
 export default {
+  methods: {
+    logout() {
+      store.dispatch('logout')
+      this.$router.push('/')
+    }
+  },
   computed: {
     getUser() {
       const currUser = store.getters.currUser

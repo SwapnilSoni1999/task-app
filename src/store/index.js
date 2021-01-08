@@ -24,6 +24,10 @@ export default new Vuex.Store({
     authenticate({ commit }, user) {
       commit('AUTH', true)
       commit('CURR_USER', user)
+    },
+    logout({ commit }) {
+      commit('AUTH', false)
+      commit('CURR_USER', {})
     }
   },
   getters: {
